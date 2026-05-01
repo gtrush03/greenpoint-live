@@ -378,16 +378,10 @@
     footer .links { display: flex; gap: 18px; }
     footer .links a:hover { color: var(--accent); }
 
-    /* —— scroll-driven reveal (progressive enhancement) —— */
+    /* —— subtle entrance (uses IntersectionObserver, JS-driven) —— */
     @keyframes pop { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
-    @supports (animation-timeline: view()) {
-      @media (prefers-reduced-motion: no-preference) {
-        .cam, .spot {
-          animation: pop .6s ease-out both;
-          animation-timeline: view();
-          animation-range: entry 0% cover 22%;
-        }
-      }
+    @media (prefers-reduced-motion: no-preference) {
+      .cam.in, .spot.in { animation: pop .55s ease-out both; }
     }
 
     /* —— watermark —— */
@@ -651,6 +645,18 @@
   renderSpots();
   tick();
   setInterval(tick, 1000);
+
+  // staggered entrance via IO
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e.target.style.animationDelay = (i * 40) + 'ms';
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -10% 0px', threshold: 0.05 });
+  document.querySelectorAll('.cam, .spot').forEach(el => io.observe(el));
 </script>
 
 </body>
