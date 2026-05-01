@@ -1,0 +1,57 @@
+<claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+The "--name" option is deprecated (https://vercel.link/name-flag)
+Loading scopes…
+Searching for existing projects…
+> No framework detected. Default Project Settings:
+
+- Build Command: `npm run vercel-build` or `npm run build`
+- Development Command: None
+- Install Command: `yarn install`, `pnpm install`, `npm install`, or `bun install`
+- Output Directory: `public` if it exists, or `.`
+Linked to george-the-gs-projects/genie-george-greenpoint-live (created .vercel and added it to .gitignore)
+> Connecting GitHub repository: https://github.com/gtrush03/greenpoint-live
+> Connected
+Deploying george-the-gs-projects/genie-george-greenpoint-live
+Uploading [--------------------] (0.0B/1.4MB)
+Uploading [=====---------------] (352.7KB/1.4MB)
+Uploading [==========----------] (704.3KB/1.4MB)
+Uploading [===============-----] (1.0MB/1.4MB)
+Uploading [====================] (1.4MB/1.4MB)
+Inspect: https://vercel.com/george-the-gs-projects/genie-george-greenpoint-live/E7D3BKXY2FskB49CKg1ep7Ww9paR [2s]
+Production: https://genie-george-greenpoint-live-gsh6ig3qg-george-the-gs-projects.vercel.app [2s]
+Building...
+Building...
+Building: Running build in Washington, D.C., USA (East) – iad1
+Building: Build machine configuration: 4 cores, 8 GB
+Building: Retrieving list of deployment files...
+Building: Previous build caches not available.
+Building: Downloading 13 deployment files...
+Building: Running "vercel build"
+Building: Vercel CLI 51.6.1
+Building: Build Completed in /vercel/output [25ms]
+Building: Deploying outputs...
+[2K[1A[2K[GProduction: https://genie-george-greenpoint-live-gsh6ig3qg-george-the-gs-projects.vercel.app [10s]
+Completing...
+Aliased: https://genie-george-greenpoint-live.vercel.app [10s]
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_E7D3BKXY2FskB49CKg1ep7Ww9paR",
+    "url": "https://genie-george-greenpoint-live-gsh6ig3qg-george-the-gs-projects.vercel.app",
+    "inspectorUrl": "https://vercel.com/george-the-gs-projects/genie-george-greenpoint-live/E7D3BKXY2FskB49CKg1ep7Ww9paR",
+    "readyState": "READY",
+    "target": "production",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_E7D3BKXY2FskB49CKg1ep7Ww9paR"
+  },
+  "message": "Deployment genie-george-greenpoint-live-gsh6ig3qg-george-the-gs-projects.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel inspect genie-george-greenpoint-live-gsh6ig3qg-george-the-gs-projects.vercel.app --scope=george-the-gs-projects",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod --scope=george-the-gs-projects",
+      "when": "Promote to production"
+    }
+  ]
+}
